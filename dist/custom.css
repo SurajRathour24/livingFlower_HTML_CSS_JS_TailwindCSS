@@ -1,0 +1,49 @@
+.carousel .card{
+    height: 342px;
+    list-style: none;
+    background-color: antiquewhite;
+    border-radius: .6rem;
+}
+#slider .carousel{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100%/3) - 12px);
+    gap: 16px;
+    overflow: hidden;
+
+}
+#slider{
+    max-width: 1000px;
+    width: 100%;
+    position: relative;
+}
+
+#slider i {
+    background: #bebebe;
+    height: 30px;
+    border-radius: 100%;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    position: absolute;
+}
+#slider i:first-child {
+    top: 50%;
+}
+#slider i:last-child {
+    right: 0;
+    bottom: 50%;
+}
+
+
+@media only screen and (max-width: 992px) {
+    #slider .carousel{
+        grid-auto-columns: calc((100%/2) - 9px);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #slider .carousel{
+        grid-auto-columns: 100%;
+    }
+}
